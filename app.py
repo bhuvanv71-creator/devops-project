@@ -4,6 +4,6 @@ app = Flask(__name__)
 
 @app.route("/")
 def home():
-    return "DevOps Project Running"
+    return "DevOps Project Running v2"
 
 app.run(host="0.0.0.0", port=5000)
