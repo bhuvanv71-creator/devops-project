@@ -1,0 +1,19 @@
+name: Test Runner
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  test:
+    runs-on: [self-hosted, linux, aws]
+    steps:
+      - name: Hello from EC2
+        run: echo "Runner is working on EC2!"
+
+      - name: Check tools
+        run: |
+          docker --version
+          terraform --version
+          aws --version
+          trivy --version
